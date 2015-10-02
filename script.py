@@ -12,7 +12,9 @@ def CheckForMoreArticles():
     print 'Checking for more articles from Slashdot'
     slashdot = newspaper.build(u'http://slashdot.org/')
     print 'Found ' + str(smh.size()) + ' new articles from SlashDot'
-    return cnn.articles + smh.articles + slashdot.articles
+    print 'Checking for more articles from BBC'
+    bbc = newspaper.build(u'http://www.bbc.com/')
+    return cnn.articles + smh.articles + slashdot.articles + bbc.articles
 
 def CompileData(article):
     title = article.title + '\r\n===================================================================\r\n'
