@@ -14,6 +14,7 @@ def CheckForMoreArticles():
     print 'Found ' + str(smh.size()) + ' new articles from SlashDot'
     print 'Checking for more articles from BBC'
     bbc = newspaper.build(u'http://www.bbc.com/')
+    print 'Found ' + str(smh.size()) + ' new articles from BBC'
     return cnn.articles + smh.articles + slashdot.articles + bbc.articles
 
 def CompileData(article):
